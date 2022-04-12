@@ -1,4 +1,15 @@
-import { penjumlahan, pengurangan, pembagian, perkalian, rataRata } from "@/utils/operation.js";
+import { 
+  penjumlahan, 
+  pengurangan, 
+  pembagian, 
+  perkalian, 
+  rataRata,
+  sisaBagi,
+  luasPersegi,
+  luasLingkaran,
+  luasKubus,
+  volKubus 
+} from "@/utils/operation.js";
 
 describe("Melakukan Penjumlahan", () => {
   test("Penjumlahan dua bilangan positif", () => {
@@ -57,5 +68,29 @@ describe("Mencari rata-rata", () => {
   });
   test("rata-rata lima bilangan koma", () => {
     expect(rataRata(5.2, 0.4, 3.0, 4.1, 2.3)).toBe(3);
+  });
+});
+
+describe("Mencari sisa bagi", () => {
+  test("sisa bagi dari bilangan positif", () => {
+    expect(sisaBagi(7, 2)).toBe(1);
+  });
+  test("sisa bagi dari bilangan positif dan negatif", () => {
+    expect(sisaBagi(-11, 3)).toBe(-2);
+  });
+  test("sisa bagi bilangan koma", () => {
+    expect(sisaBagi(5.2, 0.3)).toBe(0.10000000000000037);
+  });
+});
+
+describe("Mencari luas persegi", () => {
+  test("luas persegi pertama", () => {
+    expect(luasPersegi(7, 2)).toBe(14);
+  });
+  test("luas persegi kedua", () => {
+    expect(luasPersegi(11, 3)).toBe(33);
+  });
+  test("luas persegi ketiga", () => {
+    expect(luasPersegi(5, 0.3)).toBe(1.5);
   });
 });
