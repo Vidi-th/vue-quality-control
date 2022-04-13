@@ -78,8 +78,8 @@ describe("Mencari sisa bagi", () => {
   test("sisa bagi dari bilangan positif dan negatif", () => {
     expect(sisaBagi(-11, 3)).toBe(-2);
   });
-  test("sisa bagi bilangan koma", () => {
-    expect(sisaBagi(5.2, 0.3)).toBe(0.10000000000000037);
+  test("sisa bagi bilangan negatif negatif", () => {
+    expect(sisaBagi(-43, -3)).toBe(-1);
   });
 });
 
@@ -92,5 +92,41 @@ describe("Mencari luas persegi", () => {
   });
   test("luas persegi ketiga", () => {
     expect(luasPersegi(5, 0.3)).toBe(1.5);
+  });
+});
+
+describe("Mencari luas lingkaran", () => {
+  test("luas lingakran pertama", () => {
+    expect(luasLingkaran(5, 5)).toBe(78.5);
+  });
+  test("luas lingkaran kedua", () => {
+    expect(luasLingkaran(2, 2)).toBe(12.56);
+  });
+  test("luas lingkaran ketiga", () => {
+    expect(luasLingkaran(4, 4)).toBe(50.24);
+  });
+});
+
+describe("Mencari luas kubus", () => {
+  test("luas kubus kesatu", () => {
+    expect(luasKubus(5, 5, 5)).toBe(150);
+  });
+  test("luas kubus kedua", () => {
+    expect(luasKubus(2, 2, 2)).toBe(24);
+  });
+  test("luas kubus ketiga", () => {
+    expect(luasKubus(4, 4, 4)).toBe(96);
+  });
+});
+
+describe("Mencari Volume Kubus", () => {
+  test("vol kubus kesatu", () => {
+    expect(volKubus(5, 5, 5)).toBe(125);
+  });
+  test("vol kubus kedua", () => {
+    expect(volKubus(2, 2, 2)).toBe(8);
+  });
+  test("vol kubus ketiga", () => {
+    expect(volKubus(4, 4, 4)).toBe(64);
   });
 });
